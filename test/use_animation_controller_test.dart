@@ -1,6 +1,6 @@
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_web/scheduler.dart';
+import 'package:flutter_web/widgets.dart';
+import 'package:flutter_hooks_web/flutter_hooks.dart';
 
 import 'mock.dart';
 

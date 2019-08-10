@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_web/material.dart';
+import 'package:flutter_hooks_web/flutter_hooks.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Widget build(int value) => HookBuilder(

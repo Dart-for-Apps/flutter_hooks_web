@@ -1,6 +1,6 @@
 // ignore_for_file: invalid_use_of_protected_member, only_throw_errors
-import 'package:flutter/widgets.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_web/widgets.dart';
+import 'package:flutter_hooks_web/flutter_hooks.dart';
 
 import 'mock.dart';
 
