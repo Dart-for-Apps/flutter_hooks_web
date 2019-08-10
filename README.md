@@ -2,9 +2,9 @@
 
 # Flutter Hooks (for WEB)
 
-> All resources are implemented by @rrousselGit
-> All rights are reserved to @rrousselGit
-> I just ported this package to flutter web
+> All resources are implemented by @rrousselGit. 
+> All rights are reserved to @rrousselGit. 
+> I just ported this package to flutter web.
 
 A flutter implementation of React hooks: https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889
 
