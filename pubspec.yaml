@@ -1,7 +1,7 @@
-name: flutter_hooks
-description: A flutter implementation of React hooks. It adds a new kind of widget with enhanced code reuse.
-homepage: https://github.com/rrousselGit/flutter_hooks
-author: Remi Rousselet <darky12s@gmail.com>
+name: flutter_hooks_web
+description: (For Flutter WEB) A flutter implementation of React hooks. It adds a new kind of widget with enhanced code reuse.
+homepage: https://github.com/dart-for-apps/flutter_hooks_web
+author: Gihwan Oh <wurikiji@gmail.com>, Remi Rousselete <darky12s@gmail.com>
 
 version: 0.6.0
 
@@ -10,11 +10,25 @@ environment:
   flutter: ">=1.5.8 <2.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
+  flutter_web: any
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  flutter_web_test: any
+  build_runner: ^1.5.0
+  build_web_compilers: ^2.1.0
   pedantic: ^1.4.0
   mockito: ">=4.0.0 <5.0.0"
+
+dependency_overrides:
+  flutter_web:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web
+  flutter_web_ui:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web_ui
+  flutter_web_test:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web_test

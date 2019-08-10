@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_hooks/src/framework.dart';
+import 'package:flutter_web/foundation.dart';
+import 'package:flutter_web/scheduler.dart';
+import 'package:flutter_web/widgets.dart';
+import 'package:flutter_hooks_web/src/framework.dart';
 part 'async.dart';
 part 'animation.dart';
 part 'misc.dart';

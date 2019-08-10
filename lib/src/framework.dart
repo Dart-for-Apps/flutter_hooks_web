@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_web/foundation.dart';
+import 'package:flutter_web/scheduler.dart';
+import 'package:flutter_web/widgets.dart';
 
 /// Wether to behave like in release mode or allow hot-reload for hooks.
 ///

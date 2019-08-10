@@ -1,60 +1,82 @@
-// ignore_for_file: omit_local_variable_types
-import 'package:flutter/material.dart';
-import 'package:flutter_hooks_gallery/use_effect.dart';
-import 'package:flutter_hooks_gallery/use_state.dart';
-import 'package:flutter_hooks_gallery/use_stream.dart';
+import 'package:flutter_web/material.dart';
+import 'package:flutter_hooks_web/flutter_hooks.dart';
 
-void main() => runApp(HooksGalleryApp());
+void main() => runApp(MyApp());
 
-/// An App that demonstrates how to use hooks. It includes examples that cover
-/// the hooks provided by this library as well as examples that demonstrate
-/// how to write custom hooks.
-class HooksGalleryApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Hooks Gallery',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Hooks Gallery'),
-        ),
-        body: ListView(children: [
-          _GalleryItem(
-            title: 'useState',
-            builder: (context) => UseStateExample(),
-          ),
-          _GalleryItem(
-            title: 'useMemoize + useStream',
-            builder: (context) => UseStreamExample(),
-          ),
-          _GalleryItem(
-            title: 'Custom Hook Function',
-            builder: (context) => CustomHookExample(),
-          ),
-        ]),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class _GalleryItem extends StatelessWidget {
-  final String title;
-  final WidgetBuilder builder;
+class HookForWebTest extends HookWidget {
+  @override
+  Widget build(BuildContext context) {
+    var counter = useState(0);
 
-  const _GalleryItem({this.title, this.builder});
+    return Row(
+      children: <Widget>[
+        Text("You hit hook counter ${counter.value} timers"),
+        IconButton(
+          icon: Icon(Icons.add),
+          onPressed: () {
+            counter.value++;
+          },
+        ),
+      ],
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(title),
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute<void>(
-            builder: builder,
-          ),
-        );
-      },
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Column(
+          // Column is also layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Invoke "debug painting" (choose the "Toggle Debug Paint" action
+          // from the Flutter Inspector in Android Studio, or the "Toggle Debug
+          // Paint" command in Visual Studio Code) to see the wireframe for each
+          // widget.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Hello, World!',
+            ),
+            HookForWebTest(),
+          ],
+        ),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
