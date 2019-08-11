@@ -6,6 +6,17 @@
 > All rights are reserved to @rrousselGit. 
 > I just ported this package to flutter web.
 
+## How to install WEB version (this repository) 
+
+Add the following code to `pubspec.yaml` and then run `flutter pub get` or `flutter pub upgrade`
+
+```dart
+dependencies:
+  # ... other dependencies
+  flutter_hooks_web:
+    git: https://github.com/dart-for-apps/flutter_hooks_web
+```
+
 A flutter implementation of React hooks: https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889
 
 Hooks are a new kind of object that manages a `Widget` life-cycles. They exist for one reason: increase the code sharing _between_ widgets and as a complete replacement for `StatefulWidget`.
