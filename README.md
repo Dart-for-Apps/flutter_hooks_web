@@ -10,7 +10,7 @@
 
 Add the following code to `pubspec.yaml` and then run `flutter pub get` or `flutter pub upgrade`
 
-```dart
+```yaml
 dependencies:
   # ... other dependencies
   flutter_hooks_web:
