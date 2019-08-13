@@ -1,11 +1,5 @@
 <img src="https://raw.githubusercontent.com/rrousselGit/flutter_hooks/master/flutter-hook.svg?sanitize=true" width="200">
 
-# Flutter Hooks (for WEB)
-
-> All resources are implemented by @rrousselGit. 
-> All rights are reserved to @rrousselGit. 
-> I just ported this package to flutter web.
-
 ## How to install WEB version (this repository) 
 
 Add the following code to `pubspec.yaml` and then run `flutter pub get` or `flutter pub upgrade`
@@ -16,6 +10,12 @@ dependencies:
   flutter_hooks_web:
     git: https://github.com/dart-for-apps/flutter_hooks_web
 ```
+
+# Flutter Hooks (for WEB)
+
+> All resources are implemented by @rrousselGit. 
+> All rights are reserved to @rrousselGit. 
+> I just ported this package to flutter web.
 
 A flutter implementation of React hooks: https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889
 
