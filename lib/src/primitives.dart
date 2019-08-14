@@ -127,6 +127,20 @@ void useEffect(Dispose Function() effect, [List<Object> keys]) {
   Hook.use(_EffectHook(effect, keys));
 }
 
+/// More readable function name
+void useLifeCycle({
+  Function() onInit,
+  Function() onDispose,
+  List<Object> keys,
+}) =>
+    useEffect(
+      () {
+        onInit();
+        return onDispose;
+      },
+      keys,
+    );
+
 class _EffectHook extends Hook<void> {
   final Dispose Function() effect;
 
