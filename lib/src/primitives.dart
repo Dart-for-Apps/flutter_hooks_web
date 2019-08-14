@@ -135,7 +135,9 @@ void useLifeCycle({
 }) =>
     useEffect(
       () {
-        onInit();
+        if (onInit != null) {
+          onInit();
+        }
         return onDispose;
       },
       keys,
