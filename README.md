@@ -1,6 +1,8 @@
 <img src="https://raw.githubusercontent.com/rrousselGit/flutter_hooks/master/flutter-hook.svg?sanitize=true" width="200">
 
-## How to install WEB version (this repository) 
+## How to install WEB version (this repository) - DEPRECATED
+
+**Becuase flutter now support original `flutter` package for web app, you can use original `flutter_hooks`.**
 
 Add the following code to `pubspec.yaml` and then run `flutter pub get` or `flutter pub upgrade`
 
